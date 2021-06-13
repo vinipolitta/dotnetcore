@@ -14,11 +14,14 @@ export class EventosComponent implements OnInit {
 
   ngOnInit() {
     this.getEventos();
+
   }
 
   getEventos() {
     this.http.get('http://localhost:5000/weatherforecast').subscribe(resp => {
       this.eventos = resp
+      console.log(this.eventos);
+
     }, error => {
       console.log(error);
 

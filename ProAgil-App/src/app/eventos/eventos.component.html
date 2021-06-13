@@ -1,17 +1,28 @@
-<p>
-  eventos works!
-</p>
-
-<div *ngFor="let evento of eventos">
-  Tema:  {{evento.tema}}
-  <br>
-  Local:{{evento.local}}
-  <br>
-  Data do Evento:{{evento.dataEvento}}
-  <br>
-  Quantidades de Pessoas: {{ evento.qntdPessoas}}
-  <br>
-  Lote: {{evento.lote}}
-
-  <hr>
-</div>
+<form class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Tema</th>
+      <th>local</th>
+      <th>Data</th>
+      <th>Qtd pessoas</th>
+      <th>Lote</th>
+      <th>Opcoes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evento of eventos">
+      <td>{{evento.eventoid}}</td>
+      <td>{{evento.tema}}</td>
+      <td>{{evento.local}}</td>
+      <td>{{evento.qntdPessoas}}</td>
+      <td>{{evento.lote}}</td>
+      <td>{{evento.dataEvento}}</td>
+      <td>btn</td>
+    </tr>
+  </tbody>
+</table>

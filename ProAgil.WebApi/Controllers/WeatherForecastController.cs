@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProAgil.WebApi.Model;
 
 namespace ProAgil.WebApi.Controllers
 {
@@ -24,16 +25,57 @@ namespace ProAgil.WebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Evento> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return new Evento[]
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                new Evento()
+                {
+                    Eventoid = 1,
+                    Tema = "Angular e .NET CORE",
+                    Local = "Sao Paulo",
+                    Lote = " 1 lote",
+                    QntdPessoas = 250,
+                    DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy")
+                },
+                 new Evento()
+                {
+                    Eventoid = 2,
+                    Tema = "Angular e suas novidades",
+                    Local = "Rio de Janeiro",
+                    Lote = " 2 lote",
+                    QntdPessoas = 200,
+                    DataEvento = DateTime.Now.AddDays(3).ToString("dd/MM/yyyy")
+                },
+
+            };
+        }
+
+        [HttpGet]
+         public ActionResult<Evento> Get(int id)
+        {
+            return new Evento[]
+          {
+                new Evento()
+                {
+                    Eventoid = 1,
+                    Tema = "Angular e .NET CORE",
+                    Local = "Sao Paulo",
+                    Lote = " 1 lote",
+                    QntdPessoas = 250,
+                    DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy")
+                },
+                 new Evento()
+                {
+                    Eventoid = 2,
+                    Tema = "Angular e suas novidades",
+                    Local = "Rio de Janeiro",
+                    Lote = " 2 lote",
+                    QntdPessoas = 200,
+                    DataEvento = DateTime.Now.AddDays(3).ToString("dd/MM/yyyy")
+                },
+
+          }.FirstOrDefault(x => x.Eventoid == id);
         }
     }
 }

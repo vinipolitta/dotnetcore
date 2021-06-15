@@ -440,6 +440,29 @@
         "runtime": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
+      },
+      "ProAgil.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        }
+      },
+      "ProAgil.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "ProAgil.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        }
       }
     }
   },
@@ -1183,6 +1206,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ProAgil.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Domain/ProAgil.Domain.csproj",
+      "msbuildProject": "../ProAgil.Domain/ProAgil.Domain.csproj"
+    },
+    "ProAgil.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Repository/ProAgil.Repository.csproj",
+      "msbuildProject": "../ProAgil.Repository/ProAgil.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1191,6 +1224,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Sqlite.Core >= 5.0.1",
+      "ProAgil.Domain >= 1.0.0",
+      "ProAgil.Repository >= 1.0.0",
       "SQLite >= 3.13.0"
     ]
   },
@@ -1202,11 +1237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
+      "projectUniqueName": "c:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
       "projectName": "ProAgil-WebApi",
-      "projectPath": "C:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
+      "projectPath": "c:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
       "packagesPath": "C:\\Users\\vini\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\dotnetcore\\ProAgil-WebApi\\obj\\",
+      "outputPath": "c:\\Repos\\dotnetcore\\ProAgil-WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1228,7 +1263,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Repos\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+              "projectPath": "c:\\Repos\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj"
+            },
+            "c:\\Repos\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+              "projectPath": "c:\\Repos\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

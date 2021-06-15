@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LHMztLTXs0PGL5fZVQp+glElpv239tMYUBK5JTC7oXyg/PrPHkNiFTOnbo8s7mf+0UU1ehc9TzclLdVL/dsW3g==",
+  "dgSpecHash": "zfhvNYonpM6ow3sCGgeDnoENQy9+e3eBehjRxC6QxJj7vNt4Eucfahl+FmXBgAhod9KQSybSIo0SMAxaVnu05g==",
   "success": true,
-  "projectFilePath": "C:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
+  "projectFilePath": "c:\\Repos\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vini\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\vini\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

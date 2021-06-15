@@ -1,10 +1,12 @@
-<form class="d-flex">
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+<div class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="filtroLista">
   <button class="btn btn-outline-success" type="submit">Search</button>
-</form>
+</div>
+<h3>filtro {{filtroLista}}</h3>
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
+      <th><button class="btn btn-outline-secondary" (click)="alternarImagem()">Mostrar Imagem</button></th>
       <th>#</th>
       <th>Tema</th>
       <th>local</th>
@@ -16,13 +18,19 @@
   </thead>
   <tbody>
     <tr *ngFor="let evento of eventos">
-      <td>{{evento.eventoid}}</td>
-      <td>{{evento.tema}}</td>
-      <td>{{evento.local}}</td>
-      <td>{{evento.qntdPessoas}}</td>
-      <td>{{evento.lote}}</td>
-      <td>{{evento.dataEvento}}</td>
-      <td>btn</td>
-    </tr>
-  </tbody>
-</table>
+      <td>
+        <img *ngIf="mostrarImagem"
+        src="http://localhost:5000/img/{{evento.imageUrl}}"
+        [style.width.px]="imagemLargura" [style.margin.px]="imagemMargem"></td>
+        <td>{{evento.eventoid}}</td>
+        <td>{{evento.tema}}</td>
+        <td>{{evento.local}}</td>
+        <td>{{evento.qntdPessoas}}</td>
+        <td>{{evento.lote}}</td>
+        <td>{{evento.dataEvento}}</td>
+        <td>
+          <button class="btn btn-success"></button>
+          <button class="btn btn-danger"></button></td>
+        </tr>
+      </tbody>
+    </table>

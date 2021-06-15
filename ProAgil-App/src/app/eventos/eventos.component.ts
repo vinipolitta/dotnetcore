@@ -8,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventosComponent implements OnInit {
 
+  private _filtroLista!: string;
+
+  public get filtroLista(): string {
+    return this._filtroLista;
+  }
+  public set filtroLista(value: string) {
+    this._filtroLista = value;
+    this.eventosFiltrados =  this.filtrarEventos(this.filtroLista);
+  }
+  eventosFiltrados: any = [];
   eventos: any ;
   imagemLargura = 50;
   imagemMargem = 2;
   mostrarImagem = false;
-  filtroLista = '';
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +29,16 @@ export class EventosComponent implements OnInit {
     this.getEventos();
 
   }
+  filtrarEventos(filtrarPor: string): any {
+    if (filtrarPor) {
+      return this.eventos.filter((evento) => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1)
+    }else {
+      return this.eventos
+    }
+
+
+  }
+
   alternarImagem() {
     this.mostrarImagem = !this.mostrarImagem;
   }

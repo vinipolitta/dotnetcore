@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj": {}
+    "c:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj": {
+    "c:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
+        "projectUniqueName": "c:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
         "projectName": "ProAgil-WebApi",
-        "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
+        "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\ProAgil-WebApi.csproj",
         "packagesPath": "C:\\Users\\vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\obj\\",
+        "outputPath": "c:\\Repos\\new\\dotnetcore\\ProAgil-WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,11 +34,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
-                "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj"
               },
-              "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj": {
-                "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj"
+              "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+                "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+    "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "projectUniqueName": "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj",
         "projectName": "ProAgil.Domain",
-        "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj",
         "packagesPath": "C:\\Users\\vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\obj\\",
+        "outputPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -156,14 +156,14 @@
         }
       }
     },
-    "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+    "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "projectUniqueName": "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj",
         "projectName": "ProAgil.Repository",
-        "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\ProAgil.Repository.csproj",
         "packagesPath": "C:\\Users\\vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\obj\\",
+        "outputPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -186,8 +186,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
-                "projectPath": "C:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "c:\\Repos\\new\\dotnetcore\\ProAgil.Domain\\ProAgil.Domain.csproj"
               }
             }
           }
@@ -201,6 +201,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.16, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

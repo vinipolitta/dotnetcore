@@ -131,14 +131,39 @@ namespace ProAgil.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public Task<Palestrante[]> GetAllPalestrantesAsyncByName(string nome, bool includeEventos)
+        public async Task<Palestrante> GetPalestrantesAsync(int PalestranteId, bool includeEventos = false)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Palestrante> query = _context.Palestrantes
+              .Include(c => c.RedeSociais);
+
+            if (includeEventos)
+            {
+                query = query
+                    .Include(pe => pe.PalestranteEventos)
+                    .ThenInclude(e => e.Evento);
+            }
+
+            query = query.OrderBy(p => p.Nome)
+                    .Where(p => p.Id == PalestranteId);
+
+            return await query.FirstOrDefaultAsync();
+        }
+        public async Task<Palestrante[]> GetAllPalestrantesAsyncByName(string nome, bool includeEventos = false)
+        {
+            IQueryable<Palestrante> query = _context.Palestrantes
+              .Include(c => c.RedeSociais);
+
+            if (includeEventos)
+            {
+                query = query
+                    .Include(pe => pe.PalestranteEventos)
+                    .ThenInclude(e => e.Evento);
+            }
+
+            query = query.Where(p => p.Nome.ToLower().Contains(nome.ToLower()));
+
+            return await query.ToArrayAsync();
         }
 
-        public Task<Palestrante> GetPalestrantesAsync(int PalestranteId, bool includeEventos)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
